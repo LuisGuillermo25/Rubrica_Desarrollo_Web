@@ -4,16 +4,16 @@ body {
   color: #ffffff;
   font-family: "Inter";
 }
-
+/* Estilos para la barra de navegación: utiliza flexbox para distribuir los elementos de manera uniforme, alineándolos al centro y agregando un relleno del 2% para espaciado interno */
 .main-box {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  width: 100%;
-  padding: 0%;
-  margin: 0%;
+  display: flex; 
+  flex-direction: column; 
+  gap: 50px; 
+  width: 100%; 
+  padding: 0%; 
+  margin: 0%; 
 }
-
+/* Estilos para la barra de navegación: usa flexbox para distribuir los elementos de manera equilibrada, alineándolos al centro y agregando un pequeño espacio interno */
 nav {
   display: flex;
   justify-content: space-between;
@@ -213,11 +213,16 @@ footer .footer-column {
   max-width: 280px;
 }
 
+/* Estilos responsivos para adaptar el diseño a diferentes tamaños de pantalla */
+
+/* Pantallas de hasta 1024px de ancho */
 @media (max-width: 1024px) {
+  /* Reduce el ancho de las secciones para mejor ajuste */
   section {
     width: 90%;
   }
 
+  /* Cambia la dirección de los contenedores principales a columna y centra el contenido */
   .main-section,
   .section-with-image {
     flex-direction: column;
@@ -225,16 +230,19 @@ footer .footer-column {
     text-align: center;
   }
 
+  /* Asegura que el contenido ocupe todo el ancho disponible */
   .main-section .content,
   .section-with-image .content {
     width: 100%;
   }
 
+  /* Ajusta los botones del hero section */
   .hero-content-button {
     background: black;
     color: #ffffff;
   }
 
+  /* Cambia el fondo de ciertas secciones */
   .dark-background {
     background: #331b3b;
   }
@@ -244,7 +252,10 @@ footer .footer-column {
   }
 }
 
+/* Pantallas de hasta 768px de ancho (tablets y móviles grandes) */
+
 @media (max-width: 768px) {
+  /* Oculta los enlaces de menú y muestra el icono de menú hamburguesa */
   nav .menu-links {
     display: none;
   }
@@ -253,6 +264,7 @@ footer .footer-column {
     display: block;
   }
 
+  /* Ajusta los tamaños de los títulos */
   section h1 {
     font-size: 2.5rem;
     text-shadow: none;
@@ -262,40 +274,49 @@ footer .footer-column {
     font-size: 2rem;
   }
 
+  /* Reduce el tamaño de las imágenes dentro de las secciones */
   .main-section img,
   .section-with-image img {
     width: 80%;
   }
 
+  /* Ajusta el espaciado entre los logos de empresas */
   .companies-logos {
     gap: 20px;
   }
 
+  /* Cambia el orden de los elementos en la sección de branding */
   #branding {
     flex-direction: column-reverse;
   }
 
+  /* Ajusta los espacios en la sección de contacto */
   #contact {
     padding: 5px;
     padding-bottom: 20px;
   }
 
+  /* Oculta la imagen de la sección de contacto */
   #contact .image {
     display: none;
   }
 
-  .footer-columns{
+  /* Reorganiza las columnas del footer para mejor visibilidad en móviles */
+  .footer-columns {
     flex-direction: column;
     text-align: center;
     align-items: center;
   }
 }
 
+/* Pantallas de hasta 480px de ancho (móviles pequeños) */
 @media (max-width: 480px) {
+  /* Aumenta el ancho de las secciones para aprovechar mejor el espacio */
   section {
     width: 95%;
   }
 
+  /* Reduce los tamaños de los títulos para mejor lectura */
   section h1 {
     font-size: 2rem;
   }
@@ -304,15 +325,18 @@ footer .footer-column {
     font-size: 1.5rem;
   }
 
+  /* Reduce el tamaño de los logos de empresas */
   .companies-logos img {
     height: 25px;
   }
 
+  /* Ajusta la dirección de los contenedores en la sección "custome" */
   #custome .custome-cards {
     flex-direction: column-reverse;
     align-items: center;
   }
 
+  /* Oculta una tarjeta específica en la versión móvil */
   .custome-mobile-development-card {
     display: none;
   }
