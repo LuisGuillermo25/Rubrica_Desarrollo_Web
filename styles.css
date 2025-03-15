@@ -4,7 +4,7 @@ body {
   color: #ffffff;
   font-family: "Inter";
 }
-/* Estilos para la barra de navegación: utiliza flexbox para distribuir los elementos de manera uniforme, alineándolos al centro y agregando un relleno del 2% para espaciado interno */
+/* Estilos para la barra de navegación: utiliza flexbox para distribuir los elementos de manera uniforme*/
 .main-box {
   display: flex; 
   flex-direction: column; 
