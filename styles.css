@@ -1,0 +1,343 @@
+body {
+  margin: 0;
+  background: #a31717;
+  color: #ffffff;
+  font-family: "Inter";
+}
+/* Estilos para la barra de navegación: utiliza flexbox para distribuir los elementos de manera uniforme, alineándolos al centro y agregando un relleno del 2% para espaciado interno */
+.main-box {
+  display: flex; 
+  flex-direction: column; 
+  gap: 50px; 
+  width: 100%; 
+  padding: 0%; 
+  margin: 0%; 
+}
+/* Estilos para la barra de navegación: usa flexbox para distribuir los elementos de manera equilibrada, alineándolos al centro y agregando un pequeño espacio interno */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+}
+
+nav .logo {
+  white-space: nowrap;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav .three-lines-icon {
+  display: none;
+}
+
+.menu-links {
+  display: flex;
+  gap: 40px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 150px;
+}
+
+section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 100%;
+  text-transform: capitalize;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+section h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+.section-button {
+  width: 167px;
+  height: 48px;
+  border-radius: 8px;
+  border: none;
+}
+
+.main-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.main-section .content {
+  width: 50%;
+}
+
+.hero-content-button {
+  background: #3f3434;
+  color: #ffffff;
+}
+
+.section-with-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.section-with-image .content {
+  width: 450px;
+}
+
+#companies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.companies-label {
+  width: fit-content;
+  color: #667085;
+}
+
+.companies-logos {
+  border-radius: 10px;
+  padding: 2%;
+  max-width: 915px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.dark-background {
+  background: #857978;
+}
+
+#custome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#custome .custome-section-title {
+  width: fit-content;
+}
+
+.custome-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.custome-card {
+  width: 110%;
+  max-width: 280px;
+  background: #ffffff;
+  color: #331b3b;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.custome-card h4 {
+  text-transform: uppercase;
+}
+
+.custome-card p {
+  color: #331B3BA8;
+}
+
+.custome-card .custome-icon {
+  width: 52px;
+  height: 48px;
+  background: #ffded4;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custome-card .custome-mobile-development {
+  background: #d4f0ff;
+  width: 52px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact {
+  background: #ada7a7;
+  border-radius: 20px;
+  max-width: 1065px;
+  height: auto;
+  padding-inline: 30px;
+}
+
+.contact-content-button {
+  background-color: #a31717;
+  color: white;
+}
+
+footer {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+
+footer .footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10%;
+  width: 100%;
+}
+
+footer .footer-column {
+  max-width: 280px;
+}
+
+/* Estilos responsivos para adaptar el diseño a diferentes tamaños de pantalla */
+
+/* Pantallas de hasta 1024px de ancho */
+@media (max-width: 1024px) {
+  /* Reduce el ancho de las secciones para mejor ajuste */
+  section {
+    width: 90%;
+  }
+
+  /* Cambia la dirección de los contenedores principales a columna y centra el contenido */
+  .main-section,
+  .section-with-image {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Asegura que el contenido ocupe todo el ancho disponible */
+  .main-section .content,
+  .section-with-image .content {
+    width: 100%;
+  }
+
+  /* Ajusta los botones del hero section */
+  .hero-content-button {
+    background: black;
+    color: #ffffff;
+  }
+
+  /* Cambia el fondo de ciertas secciones */
+  .dark-background {
+    background: #331b3b;
+  }
+  
+  #contact {
+    background: #331b3b;
+  }
+}
+
+/* Pantallas de hasta 768px de ancho (tablets y móviles grandes) */
+
+@media (max-width: 768px) {
+  /* Oculta los enlaces de menú y muestra el icono de menú hamburguesa */
+  nav .menu-links {
+    display: none;
+  }
+
+  nav .three-lines-icon {
+    display: block;
+  }
+
+  /* Ajusta los tamaños de los títulos */
+  section h1 {
+    font-size: 2.5rem;
+    text-shadow: none;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  /* Reduce el tamaño de las imágenes dentro de las secciones */
+  .main-section img,
+  .section-with-image img {
+    width: 80%;
+  }
+
+  /* Ajusta el espaciado entre los logos de empresas */
+  .companies-logos {
+    gap: 20px;
+  }
+
+  /* Cambia el orden de los elementos en la sección de branding */
+  #branding {
+    flex-direction: column-reverse;
+  }
+
+  /* Ajusta los espacios en la sección de contacto */
+  #contact {
+    padding: 5px;
+    padding-bottom: 20px;
+  }
+
+  /* Oculta la imagen de la sección de contacto */
+  #contact .image {
+    display: none;
+  }
+
+  /* Reorganiza las columnas del footer para mejor visibilidad en móviles */
+  .footer-columns {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* Pantallas de hasta 480px de ancho (móviles pequeños) */
+@media (max-width: 480px) {
+  /* Aumenta el ancho de las secciones para aprovechar mejor el espacio */
+  section {
+    width: 95%;
+  }
+
+  /* Reduce los tamaños de los títulos para mejor lectura */
+  section h1 {
+    font-size: 2rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Reduce el tamaño de los logos de empresas */
+  .companies-logos img {
+    height: 25px;
+  }
+
+  /* Ajusta la dirección de los contenedores en la sección "custome" */
+  #custome .custome-cards {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  /* Oculta una tarjeta específica en la versión móvil */
+  .custome-mobile-development-card {
+    display: none;
+  }
+}
